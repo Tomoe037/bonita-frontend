@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="400" height="400" viewBox="0 0 400 400">
+  <rect width="400" height="400" fill="#eff5fa"/>
+  <g fill="none" stroke="#8aaecb" stroke-width="3" stroke-linejoin="round"><path d="m200 120 66 38v78l-66 38-66-38v-78Z"/><path d="m134 158 66 38 66-38M200 196v78m-33-135 66 38"/></g>
+  <text x="200" y="318" text-anchor="middle" font-family="Arial,sans-serif" font-size="15" fill="#55738b">BONITA SHOP</text>
+  <text x="200" y="343" text-anchor="middle" font-family="Arial,sans-serif" font-size="12" fill="#55738b">Hình ảnh đang cập nhật</text>
+</svg>

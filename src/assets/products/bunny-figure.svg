@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="400" height="400" viewBox="0 0 400 400">
+  <defs><linearGradient id="bg" x2="0" y2="1"><stop stop-color="#eee6f4"/><stop offset="1" stop-color="#faf4f3"/></linearGradient><linearGradient id="body" x2="1" y2="1"><stop stop-color="#fffdf9"/><stop offset="1" stop-color="#e5dce8"/></linearGradient></defs>
+  <rect width="400" height="400" fill="url(#bg)"/><circle cx="200" cy="179" r="133" fill="#fff" opacity=".45"/>
+  <g fill="#c8b6db"><path d="m70 170 5-13 5 13 13 5-13 5-5 13-5-13-13-5Z"/><circle cx="313" cy="105" r="5"/><circle cx="310" cy="264" r="4"/></g>
+  <ellipse cx="200" cy="344" rx="94" ry="16" fill="#9e84b1" opacity=".19"/><ellipse cx="200" cy="337" rx="79" ry="12" fill="#fff"/>
+  <ellipse cx="163" cy="106" rx="25" ry="65" transform="rotate(-13 163 106)" fill="url(#body)"/><ellipse cx="240" cy="106" rx="25" ry="65" transform="rotate(13 240 106)" fill="url(#body)"/>
+  <ellipse cx="163" cy="103" rx="11" ry="45" transform="rotate(-13 163 103)" fill="#efc4d4"/><ellipse cx="240" cy="103" rx="11" ry="45" transform="rotate(13 240 103)" fill="#efc4d4"/>
+  <ellipse cx="200" cy="274" rx="56" ry="57" fill="#b7a4d0"/><ellipse cx="156" cy="324" rx="28" ry="15" fill="url(#body)"/><ellipse cx="244" cy="324" rx="28" ry="15" fill="url(#body)"/>
+  <ellipse cx="147" cy="264" rx="17" ry="29" transform="rotate(28 147 264)" fill="url(#body)"/><ellipse cx="253" cy="264" rx="17" ry="29" transform="rotate(-28 253 264)" fill="url(#body)"/>
+  <ellipse cx="200" cy="183" rx="82" ry="69" fill="url(#body)"/><ellipse cx="173" cy="184" rx="6" ry="8" fill="#645270"/><ellipse cx="227" cy="184" rx="6" ry="8" fill="#645270"/>
+  <ellipse cx="152" cy="204" rx="13" ry="7" fill="#edbfce"/><ellipse cx="248" cy="204" rx="13" ry="7" fill="#edbfce"/><path d="m195 200 5 5 5-5m-5 5v6m-8 0q8 7 16 0" fill="none" stroke="#a47c91" stroke-width="3" stroke-linecap="round"/>
+  <path d="m200 253-22-13v27l22-10 22 10v-27Z" fill="#f6d6a0"/><circle cx="200" cy="254" r="6" fill="#ffedc6"/><path d="m200 278 5 10 11 1-8 8 2 11-10-5-10 5 2-11-8-8 11-1Z" fill="#f9e4b6"/>
+</svg>
