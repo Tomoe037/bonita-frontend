@@ -1,7 +1,8 @@
-import Breadcrumb from '../components/common/Breadcrumb'
-import CatalogLayout from '../components/catalog/CatalogLayout'
-import FilterSidebar from '../components/catalog/FilterSidebar'
-import ProductSection from '../components/catalog/ProductSection'
+import Breadcrumb from '../../components/common/Breadcrumb'
+import CatalogLayout from '../../components/catalog/CatalogLayout'
+import FilterSidebar from '../../components/catalog/FilterSidebar'
+import ProductSection from '../../components/catalog/ProductSection'
+import './CategoryPage.css'
 
 export default function CategoryPage({ breadcrumbItems, onBreadcrumbSelect, filterProps, productSectionProps }) {
   return (

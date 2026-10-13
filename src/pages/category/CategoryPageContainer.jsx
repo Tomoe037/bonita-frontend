@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import CategoryPage from "./CategoryPage";
-import { catalogDemo } from "../data/catalogDemo";
+import { catalogDemo } from "../../data/catalogDemo";
+import { useNavigate } from "react-router";
 
 const API_BASE_URL = import.meta.env.VITE_API_BASE_URL;
 
@@ -9,6 +10,11 @@ export default function CategoryPageContainer() {
   const [products, setProducts] = useState([]);
   const [selectedCategoryIds, setSelectedCategoryIds] = useState([]);
   const [selectedPriceId, setSelectedPriceId] = useState("all");
+  const navigate = useNavigate();
+
+const handleProductClick = (product) => {
+  navigate(`/products/${product.id}`);
+};
 
   const handlePriceChange = (priceId) => {
     setSelectedPriceId(priceId);
@@ -37,6 +43,7 @@ export default function CategoryPageContainer() {
     ...catalogDemo.filterProps,
     categories: categories,
     selectedCategoryIds: selectedCategoryIds,
+    selectedPriceId: selectedPriceId,
     onCategoryChange: handleCategoryChange,
     onPriceChange: handlePriceChange,
     onReset: handleResetFilters,
@@ -61,6 +68,7 @@ export default function CategoryPageContainer() {
     ...catalogDemo.productSectionProps,
     products: filteredProducts,
     toolbarProps: toolbarProps,
+    onProductClick: handleProductClick,
   };
 
   const pageProps = {

@@ -32,7 +32,7 @@ Callback tùy chọn. Các hàm nhỏ trong JSX chỉ chuyển tiếp sự kiệ
 | `components/layout/SiteHeader.jsx` | `brandName`, `searchValue?`, `searchPlaceholder`, `cartCount` | `onSearchChange(event)`, `onSearchClick(event)`, `onAccountClick(event)`, `onCartClick(event)`, `onBrandClick(event)` |
 | `components/layout/CategoryNav.jsx` | `items: { id, label, hasChildren? }[]`, `activeId`; `hasChildren` chỉ hiển thị mũi tên | `onSelect(item)` |
 | `components/layout/SiteFooter.jsx` | `brandName`, `description`, `contactLines: string[]`, `groups: { id, title, links: { id, label }[], description? }[]`, `copyright` | `onLinkClick(link)` |
-| `pages/CategoryPage.jsx` | `breadcrumbItems`, `filterProps`, `productSectionProps` | `onBreadcrumbSelect(item)`; callback khác truyền trong 2 object props |
+| `pages/category/CategoryPage.jsx` | `breadcrumbItems`, `filterProps`, `productSectionProps` | `onBreadcrumbSelect(item)`; callback khác truyền trong 2 object props |
 | `components/common/Breadcrumb.jsx` | `items: { id, label }[]`; phần tử cuối là trang hiện tại | `onSelect(item)` |
 | `components/catalog/CatalogLayout.jsx` | `sidebar: ReactNode`, `children: ReactNode` | — |
 | `components/catalog/FilterSidebar.jsx` | `categories: { id, label, count? }[]`, `priceRanges: { id, label, min?, max? }[]`, `selectedCategoryIds: string[]`, `selectedPriceId` | `onCategoryChange(categoryId)`, `onPriceChange(priceId)`, `onReset(event)` |
@@ -72,7 +72,7 @@ const product = {
 - `data/catalogDemo.js`: 8 sản phẩm minh họa trên 1 trang. Số lượng toolbar lấy từ độ dài mảng `demoProducts`, hiển thị `1–8 trong 8 sản phẩm`. Không truyền số đếm danh mục mẫu; thêm `count` khi có dữ liệu chính xác.
 - `assets/products/{mint,bunny,cat,space}-figure.svg`: 4 hình SVG minh họa tự tạo, dùng cục bộ; thay `image_url` bằng ảnh sản phẩm thật sau.
 - `assets/product-placeholder.svg`: ảnh dự phòng khi thiếu URL hoặc khi ảnh lỗi. `onError` chỉ thay URL sang ảnh dự phòng, có kiểm tra để tránh vòng lặp nếu cả ảnh dự phòng lỗi. Đây là xử lý hiển thị duy nhất ngoài chuyển tiếp callback.
-- `index.css`: reset, font hệ thống và biến màu; `App.css`: layout và toàn bộ responsive.
+- `index.css`: reset, font hệ thống và biến màu; `App.css`: layout, breadcrumb, lưới/thẻ sản phẩm và responsive dùng chung; `pages/category/CategoryPage.css`: bố cục danh mục, bộ lọc, toolbar và phân trang cùng responsive riêng.
 - Desktop từ 960px: sidebar trái và 4 sản phẩm/hàng. Tablet 701–959px: 3 sản phẩm/hàng. Mobile tối đa 700px: bộ lọc mặc định thu gọn bằng `<details>/<summary>`, bấm hoặc dùng bàn phím để mở/đóng; không có React state. CSS giữ nội dung bộ lọc luôn hiện trên desktop. Mobile có lưới 2 cột, menu cuộn ngang; footer 2 cột, xuống 1 cột ở màn hình rất nhỏ.
 - Có focus bàn phím, nhãn input, `aria-current`, skip link, trạng thái danh sách rỗng và hỗ trợ giảm chuyển động.
 

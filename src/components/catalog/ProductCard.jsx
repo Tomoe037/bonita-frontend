@@ -16,7 +16,7 @@ export default function ProductCard({ product, onProductClick, fallbackImage = d
         </div>
         {product.category && <span className="product-category">{product.category}</span>}
         <h2 title={product.name}>{product.name}</h2>
-        <div className="product-prices"><span>{currency.format(product.price)}</span>{product.original_price > product.price && <del>{currency.format(product.original_price)}</del>}</div>
+        <div className="product-prices"><span>{currency.format(product.price)}</span>{Number(product.original_price) > Number(product.price) && <del>{currency.format(product.original_price)}</del>}</div>
       </button>
     </article>
   )

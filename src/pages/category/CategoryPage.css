@@ -1,0 +1,87 @@
+/* Category page layout, filters, toolbar and pagination. */
+.category-page { padding-top: 20px; padding-bottom: 32px; }
+.catalog-layout { display: grid; grid-template-columns: 250px minmax(0, 1fr); gap: 32px; padding: 28px 26px 24px; background: #fff; border-radius: 10px; }
+.catalog-content { min-width: 0; }
+.filter-sidebar { border-right: 1px solid var(--border); padding-right: 25px; }
+.filter-disclosure { display: none; }
+.filter-sidebar h2 { display: flex; align-items: center; gap: 9px; font-size: 14px; text-transform: uppercase; letter-spacing: .3px; }
+.filter-sidebar h2 .icon { width: 19px; height: 19px; color: var(--blue-dark); }
+.filter-description { margin-top: 12px; color: var(--muted); font-size: 12px; line-height: 1.7; }
+.filter-groups { margin-top: 28px; }
+.filter-groups fieldset { min-width: 0; margin: 0 0 26px; padding: 0 0 22px; border: 0; border-bottom: 1px solid var(--border); }
+.filter-groups legend { margin-bottom: 15px; padding: 0; font-size: 13px; font-weight: 700; }
+.filter-option { display: flex; gap: 9px; align-items: center; min-height: 36px; font-size: 12px; cursor: pointer; }
+.filter-option input { flex-shrink: 0; accent-color: var(--blue-dark); width: 15px; height: 15px; margin: 0; }
+.filter-option small { margin-left: auto; color: var(--muted); font-size: 10px; background: #f3f6f9; padding: 2px 6px; border-radius: 4px; }
+.reset-filters { width: 100%; min-height: 38px; background: #fff; border: 1px solid #d4e2ec; border-radius: 4px; font-size: 12px; }
+.reset-filters:hover { background: #f0f8fe; border-color: var(--blue); }
+.sidebar-note { margin-top: 34px; padding: 27px 12px; text-align: center; border: 1px solid #e1eef7; border-radius: 6px; background: #f4faff; }
+.sidebar-note .icon { color: #6aa9d6; }
+.sidebar-note p { margin-top: 13px; font-size: 13px; line-height: 1.9; }
+.sidebar-note > span { display: block; margin-top: 19px; font-size: 9px; font-weight: 700; letter-spacing: 2px; color: #7291aa; }
+.section-heading { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding-bottom: 21px; }
+.section-heading h1 { font-size: 18px; line-height: 1.4; text-transform: uppercase; font-weight: 700; }
+.section-heading p { margin-top: 7px; font-size: 12px; color: var(--muted); line-height: 1.6; }
+.collection-label { color: #7892a8; font-size: 8px; letter-spacing: 1.5px; white-space: nowrap; }
+.product-toolbar { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 14px; padding: 15px 0; margin-bottom: 24px; border-block: 1px solid var(--border); font-size: 12px; }
+.product-toolbar p { color: var(--muted); }
+.product-toolbar strong { color: var(--ink); font-weight: 600; }
+.sort-control { display: flex; align-items: center; gap: 12px; }
+.sort-control > span { color: var(--muted); }
+.sort-control select { max-width: 100%; min-height: 37px; padding: 0 30px 0 12px; border: 1px solid #d4e2ec; border-radius: 3px; background: #f3f9ff; color: #315c80; cursor: pointer; font-size: 12px; }
+.pagination { display: flex; justify-content: center; flex-wrap: wrap; gap: 5px; padding: 40px 0 14px; }
+.pagination button, .pagination-gap { display: grid; place-items: center; width: 36px; height: 36px; border: 1px solid var(--border); border-radius: 3px; background: #fff; color: var(--blue-dark); font-size: 12px; }
+.pagination button:hover:not(:disabled) { background: #edf7ff; }
+.pagination button.is-active, .pagination button.is-active:hover { background: var(--blue-dark); border-color: var(--blue-dark); color: #fff; }
+.pagination button:disabled { color: #b9c7d3; background: #fafbfd; }
+.pagination .icon { width: 14px; height: 14px; }
+.pagination-gap { border: none; }
+@media (max-width: 1199px) {
+  .catalog-layout { grid-template-columns: 205px minmax(0, 1fr); gap: 22px; padding: 24px 20px; }
+  .filter-sidebar { padding-right: 18px; }
+  .filter-option { font-size: 11px; }
+  .filter-description { font-size: 11px; }
+  .collection-label { display: none; }
+}
+@media (max-width: 959px) {
+  .catalog-layout { grid-template-columns: 180px minmax(0, 1fr); gap: 20px; }
+  .filter-sidebar { padding-right: 14px; }
+  .filter-sidebar h2 { font-size: 12px; gap: 5px; }
+  .filter-sidebar h2 .icon { width: 16px; }
+  .filter-option { gap: 7px; }
+  .sort-control { margin-left: auto; }
+}
+@media (max-width: 700px) {
+  .category-page { padding-top: 14px; padding-bottom: 24px; }
+  .catalog-layout { grid-template-columns: minmax(0, 1fr); padding: 20px 16px; gap: 24px; }
+  .filter-sidebar { border-right: 0; border-bottom: 1px solid var(--border); padding: 0 0 20px; }
+  .filter-sidebar h2 { font-size: 13px; gap: 8px; }
+  .filter-desktop { display: none; }
+  .filter-disclosure { display: block; }
+  .filter-toggle { display: flex; align-items: center; gap: 8px; min-height: 44px; cursor: pointer; list-style: none; font-size: 13px; font-weight: 700; text-transform: uppercase; }
+  .filter-toggle::-webkit-details-marker { display: none; }
+  .filter-toggle:focus-visible { outline: 3px solid #174f82; outline-offset: 3px; }
+  .filter-toggle .icon { width: 19px; height: 19px; color: var(--blue-dark); }
+  .filter-toggle-chevron { margin-left: auto; transform: rotate(90deg); }
+  .filter-disclosure[open] .filter-toggle-chevron { transform: rotate(-90deg); }
+  .filter-disclosure:not([open]) > .filter-content { display: none; }
+  .filter-description { margin-top: 6px; }
+  .filter-groups { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-top: 20px; }
+  .filter-groups fieldset { margin-bottom: 10px; padding-bottom: 0; border-bottom: 0; }
+  .filter-groups legend { font-size: 12px; margin-bottom: 8px; }
+  .filter-option { min-height: 38px; line-height: 1.5; }
+  .filter-option small { display: none; }
+  .reset-filters { width: auto; padding-inline: 16px; margin-top: 6px; }
+  .sidebar-note { display: none; }
+  .section-heading { padding-bottom: 17px; }
+  .section-heading h1 { font-size: 16px; }
+  .product-toolbar { margin-bottom: 20px; gap: 12px; font-size: 11px; }
+  .sort-control { margin-left: 0; justify-content: space-between; width: 100%; }
+  .sort-control select { flex: 1; max-width: 210px; }
+  .pagination { padding-top: 30px; gap: 4px; }
+  .pagination button, .pagination-gap { width: 32px; height: 36px; }
+}
+@media (max-width: 359px) {
+  .filter-groups { grid-template-columns: 1fr; }
+}
+
